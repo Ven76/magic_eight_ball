@@ -27,11 +27,11 @@ def main_menu
   if user_input == 1
    eight_ball
   elsif user_input == 2
-    maker
+    add_answers
   elsif user_input == 3
-    delete_answers
+    reset_answers
   elsif user_input == 4
-    options
+    print_answers
   elsif user_input == 5
     puts "Later"
      exit(0)
@@ -54,7 +54,7 @@ def eight_ball
     puts ""
 end
 
-def maker
+def add_answers
   puts ""
   puts "Write a response for 8 Ball"
   puts ">>"
@@ -62,14 +62,14 @@ def maker
       @answers2 << thing
 end
 
-def delete_answers
+def reset_answers
   @answers2.clear
   puts ''
   puts "Custom Cleared"
   puts ''
 end
 
-def options
+def print_answers
   [@answers, @answers2].flatten.uniq.shuffle.each_with_index do |op, i|
     puts "#{i + 1}> #{op}"
   end
