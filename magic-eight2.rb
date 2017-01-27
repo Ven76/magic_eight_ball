@@ -17,9 +17,6 @@ puts "Check it out. 8 Ball.You gotta question? You ask the 8 ball! -Putty"
 def main_menu
   puts ""
   puts "1) Ask a question"
-  puts "2) Make your own answer"
-  puts "3) Delete custom answers"
-  puts "4) Print answers"
   puts "5) To get out"
   puts ">>"
   user_input = gets.chomp.to_i
